@@ -1,0 +1,76 @@
+https://mine-it-record.tistory.com/561
+
+node sass -> dart sass로 합쳐짐
+
+dependencies는 빌드 포함 - 없으면 개발 안 됨
+devDependencies 빌드 포함 X 개발에 필요한 편의성 적인것들 - 없어도 개발 됨
+
+npm 사이트만이 아닌 실제 설치 하는 사람들 예시 확인 해서 깔아야함
+
+현재 vue 2.6.xxx
+
+vue 2.8 이상 되면 문제 있을 수 있으므로 전수조사 필요
+
+vue 2.4: 탭모드 window창 올라가면 데이터 syncronize되었는데 이제 안 됨.
+
+
+package.json
+-- 수기로 작성해야함
+"browserslist": [
+    "> 1%", // 전세계 점유율 1퍼센트 이상인 것만 
+    "last 2 versions",	// 현재나온 lts 에서 마지막 2버전까지
+    "not dead"	// 없어진거 제외
+  ]
+
+
+package-lock: node_module에 들어간 라이브러리 목록. 구성요소 목록. 버전 픽스 가능
+
+npm install force -> 예전 버전을 강제로 가져오는 옵션
+
+lock이 있으면 해당 버전으로 깐다.
+없으면 package.json에서 하나하나 전부 신규 버전으로 확인하여 다운
+
+npm에 등록되면 삭제는 안 됨. 정책적으로.
+
+index.js로 인한 import 확인
+
+
+slot 처리 방식 2.x VS 3.x 차이
+
+레이아웃 잡는 방법
+-> 제일 큰 풀사이즈가 우선.
+레이어는 레벨로 본다
+
+route vs router
+
+router는 name으로 화면 이동을 많이. 유니크 해야함
+
+path는 고정적인 페이지인 경우 
+내부에서 호출되거나 화면 이동은 대부분 name으로 이동.
+
+이벤트버스는 2.4 이상으로는 지양
+
+상태관리는 store를 우선으로
+
+prefix map 붙은 경우 별도 컴포넌트에서 호출하여 병합해 사용가능
+
+vuex의 경우 빌드시 난수화를 해주는 방어코딩이 존재하기 때문에
+실제로 회원 등 관련된 보안 api를 vuex action을 통해 호출하도록 하는 등 이용할 부분이 많다. 효율적, 안정성 있게 사용할 수 있다.
+
+vue3에 타입스크립트 => vuex 5
+vue2면 vuex 버전 4까지만
+
+
+스코프 체크 전역 확인. -> 평가 -> 런타임실행 -> 엇 중간에 블록...?? -> 런타임 중지 -> 스코프 확인 -> 다시 런
+
+
+- 월요일 전 제출 read.me에 설명은 작성 -
+1. 레이아웃
+2. 라이프사이클
+3. vuex 기능
+4. 라우터 라우트 차이
+
+1. Vue 객체 만들기
+2. this
+https://www.notion.so/this-ad6063f1255b4674be368a0575b5ada5
+

@@ -1,0 +1,26 @@
+# 깃에서 무시
+.DS_Store
+node_modules
+/dist
+
+
+# local env files - 필요한 것. 올라가야함. 프로필(mode) 관리. 모드에 따른 빌드나 등등 관리를 위하여 처리
+# .env가 있으면 다른 env읽지 않음
+# express는 다르기 때문에 안 먹을 수 있으므로 별도 확인 필요
+# .env.local
+# .env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,20 @@
+// tsconfig랑은 설정이 다름
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext", // 엔진
+    "baseUrl": "./", // 최상위는 path로 잡힌 곳에서 ./
+    "moduleResolution": "node",
+    "paths": {  // 여기서 안 먹는 경우면 웹팩에서 적용 가능
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable", // 가상돔 관리
+      "scripthost"
+    ]
+  }
+}

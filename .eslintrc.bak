@@ -1,0 +1,18 @@
+// package.json에서 관리 할 수 있지만 보통 package.json은 코어한 영역
+// 따로 관리 하려면 별도 파일 생성으로 확인
+// 파일이 존재하면 파일 먼저 확인 -> package.json 읽음
+// "eslintConfig": {
+//     "root": true,
+//     "env": {
+//       "node": true
+//     },
+//     "extends": [
+//       "plugin:vue/essential",
+//       "eslint:recommended",
+//       "plugin:prettier/recommended"
+//     ],
+//     "parserOptions": {
+//       "parser": "@babel/eslint-parser"
+//     },
+//     "rules": {}
+//   },

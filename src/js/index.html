@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    이름: <input id="input-name" /> <br />
+    당신의 이름: <span id="read-name"></span>
+  </body>
+
+  <script>
+    // 1. 이름을 저장할 공간을 생성. 객체 리터럴로 생성
+    const person = {
+      _name: '',
+
+      get name() {
+        console.log('getter');
+        return this._name;
+      },
+
+      set name(newName) {
+        console.log('setter');
+        this._name = newName;
+
+        const result = document.getElementById('read-name');
+        result.innerHTML = person.name;
+      },
+    };
+
+    // 2. 내가 input할때마다 그 값을 할당
+    const input = document.getElementById('input-name');
+    input.addEventListener('input', (e) => {
+      // 할당
+      person.name = e.target.value;
+      // 접근
+      console.log(person.name);
+    });
+
+    // 3. 이름이 변경될때마다 "당신의 이름: " 옆에 렌더링해보자.
+    // const result = document.getElementById('read-name');
+    // result.innerHTML = person.name;
+
+    // 결론:  Vue, React => 데이터의 할당과 접근을 활용한 reactibity 
+  </script>
+</html>
