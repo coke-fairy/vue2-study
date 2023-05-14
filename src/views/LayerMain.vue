@@ -24,6 +24,10 @@ export default {
     Left,
     Right,
   },
+  created() {
+
+  }
+  
 };
 </script>
 

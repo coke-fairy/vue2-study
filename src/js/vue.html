@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        Vue 객체 만들기
+    -->
+    이름: <input id="input-name" /> <br />
+    당신의 이름: <span id="read-name"></span>
+  </body>
+  <script>
+    // onload 함수 재정의
+    // onload: 자바스크립트에서 페이지가 로드되면 자동으로 실행되는 전역 콜백함수
+    window.onload = () => {
+      const input = document.getElementById('input-name');
+      const span = document.getElementById('read-name');
+
+      const person = {
+        _name: '김철수',
+
+        get name() {
+          return this._name;
+        },
+
+        set name(name) {
+          this._name = name;
+          this.render();
+        },
+
+        render() {
+          input.value = this.name;
+          span.innerText = this.name;
+        },
+      };
+
+      person.render();
+
+      input.oninput = (e) => {
+        const target = e.target.value;
+        person.name = target;
+      };
+    };
+  </script>
+</html>
